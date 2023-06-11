@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 /**
  * Custom React hook to dynamically calculate and assign height to an element
  * based on the window height and the heights of other specified elements.
@@ -7,9 +9,6 @@
  * @param {number} [offset=0] - Additional offset to be subtracted from the calculated height.
  * @returns {void} 
  */
-
-import { useEffect, useState } from "react";
-
 const useHeightCalculator = (elementRef, otherElementIds, minHeight = 0, offset = 0) => {
     const [height, setHeight] = useState(minHeight);
 
