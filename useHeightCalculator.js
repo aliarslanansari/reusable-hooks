@@ -1,13 +1,12 @@
 /**
- Usage example
- 
- useHeightCalculator(containerRef, ["main-header", "page-main-tabs"], 635, 28);
- 
- this Hook will apply height to containerRef element by 
- subtracting "main-header", "page-main-tabs" height, and also substract 28px.
-  
- You can also mention minHeight in this case it is 635px.
-*/
+ * Custom React hook to dynamically calculate and assign height to an element
+ * based on the window height and the heights of other specified elements.
+ * @param {object} elementRef - Reference to the target element.
+ * @param {string[]} otherElementIds - Array of IDs of other elements whose heights should be subtracted.
+ * @param {number} [minHeight=0] - Minimum height for the element.
+ * @param {number} [offset=0] - Additional offset to be subtracted from the calculated height.
+ * @returns {void} 
+ */
 
 import { useEffect, useState } from "react";
 
